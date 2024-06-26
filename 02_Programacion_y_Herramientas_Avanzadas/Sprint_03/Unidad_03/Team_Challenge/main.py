@@ -65,9 +65,9 @@ def main():
     enable_print()
     ###################################################################################
     # Debería de tener los barcos del jugador y la máquina colocados:
-    print("Jugador ->",vars.dic_tableros["jugador"]) 
-    print("\n===========================================\n")
-    print("Máquina ->",vars.dic_tableros["maquina"])
+    #print("Jugador ->",vars.dic_tableros["jugador"]) 
+    #print("\n===========================================\n")
+    #print("Máquina ->",vars.dic_tableros["maquina"])
     
 
     '''
