@@ -3,10 +3,14 @@ import variables as vars
 
 def obtener_tupla():
     while True:
-        entrada = input("Introduce una tupla de dos números enteros entre 0 y 9 separados por coma (por ejemplo, 1,2): ")
+        entrada = input("Por favor, introduce una tupla de dos números enteros entre 0 y 9 separados por coma (por ejemplo, 1,2): ")
         try:
             # Dividir la entrada por comas
             partes = entrada.split(',')
+            for elem in partes:
+                if (int(elem.strip()) > 9) or (int(elem.strip()) < 0):
+                    raise ValueError("Los números de la tupla tienen que estar entre el 0 y 9.")
+
             if len(partes) != 2:
                 raise ValueError("Debes introducir exactamente dos números.")
 
@@ -28,8 +32,7 @@ def introducir_input():
 
             tam = int(input("Tamaño que va a tener el barco:"))
             if tam not in vars.tam_barcos:
-                raise ValueError ("No puedes introducir un barco de este tamaño, \
-                                    los posibles tamaños de barcos que quedan son:", vars.tam_barcos)
+                raise ValueError ("No puedes introducir un barco de este tamaño, los posibles tamaños de barcos que quedan son:", vars.tam_barcos)
             
             orientacion = input("Orientación del barco (N, S, E, O):")
             if not orientacion.lower() in vars.p_cardinales:
