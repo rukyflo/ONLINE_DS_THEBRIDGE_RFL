@@ -79,7 +79,8 @@ def main():
     '''
 
     while 0 not in vars.dic_vidas.values():
-        print(f"VIDAS:\n Tú -> {vars.dic_vidas["jugador"]} vidas \n Rival -> {vars.dic_vidas["maquina"]} vidas")
+        print("\n\n\nCOMENZAMOOOOOS!!! Mucha suerte, recuerda leer los mensajes que aparecen para ir siguiendo el juego :)")
+        print(f"\nVIDAS:\n Tú -> {vars.dic_vidas["jugador"]} vidas \n Rival -> {vars.dic_vidas["maquina"]} vidas")
         print("\nTú turno, apunta bien...")
         pos = f.obtener_tupla()
         if vars.dic_tableros["jugador_disp"][pos] == " ":
